@@ -97,3 +97,31 @@ class Number2Words:
         word = word + after
         word.strip()
         return word
+
+    # -------------------------------------------------------------------------  #
+    def thousands(self, number):
+        word = ''
+        after = self.hundreds(number[1:])
+        if number[0] == "1":
+            word = 'One'
+        if number[0] == "2":
+            word = 'Two'
+        if number[0] == "3":
+            word = 'Three'
+        if number[0] == "4":
+            word = 'Four'
+        if number[0] == "5":
+            word = 'Five'
+        if number[0] == "6":
+            word = 'Six'
+        if number[0] == "7":
+            word = 'Seven'
+        if number[0] == "8":
+            word = 'Eight'
+        if number[0] == "9":
+            word = 'Nine'
+        if number[0] != '0':
+            word = word + ' Thousand '
+        word = word + after
+        word.strip()
+        return word
